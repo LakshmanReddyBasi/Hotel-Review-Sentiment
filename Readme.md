@@ -12,6 +12,8 @@ This project classifies hotel reviews into Negative, Neutral, or Positive using 
 - `models/*.h5`: All trained models (with and without class weights)
 - `requirements.txt`: List of libraries needed
 
+- you need to run the notebook , for getting the pkl files and .h5 files.
+
 ## How to Run
 
 1. Install Python 3.8+
