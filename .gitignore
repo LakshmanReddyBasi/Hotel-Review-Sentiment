@@ -1,0 +1,10 @@
+glove.6B.100d.txt
+models/
+*.h5
+*.pkl
+*.pyc
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+.env
+*.log

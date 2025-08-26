@@ -1,0 +1,35 @@
+Model Performance Summary
+==========================
+
+All models trained on Tripadvisor hotel reviews to predict sentiment: Negative, Neutral, Positive.
+
+Two versions trained per model:
+- Without class weights
+- With class weights (to handle imbalance)
+
+Best Model: CNN with class weights
+
+Model Comparison (Validation F1-Score):
+
+| Model               | F1 (No CW) | F1 (With CW) | Notes                     |
+|---------------------|------------|--------------|---------------------------|
+| Dense               | 0.78       | 0.79         | Improved with CW          |
+| CNN                 | 0.82       | 0.83         | Best overall            |
+| LSTM                | 0.80       | 0.81         | Slower, no big gain       |
+| BiLSTM+Attention    | 0.80       | 0.82         | Complex, but not better   |
+
+Key Metrics for Best Model (CNN + CW):
+- Accuracy: 84.9%
+- F1-Score (Weighted): 0.83
+- Neutral Recall: 0.38
+- Training Time: ~10 sec/epoch
+
+Why CNN Won:
+- Fast and accurate
+- Handles mixed sentiment better after class weights
+- Simpler than RNNs
+
+Note:
+- All models struggled with Neutral class (3-star, mixed sentiment)
+- Class weights helped, but Neutral recall still low
+- "But" and contrastive phrases are hard to classify
