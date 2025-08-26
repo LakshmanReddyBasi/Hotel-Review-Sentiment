@@ -1,4 +1,4 @@
-# Hotel Review Sentiment Classifier
+# Hotel Review Sentiment Analysis 
 
 This project classifies hotel reviews into Negative, Neutral, or Positive using deep learning.
 
